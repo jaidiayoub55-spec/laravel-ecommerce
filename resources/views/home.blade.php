@@ -173,21 +173,42 @@ function addToCart(id) {
 
 // ❤️ Wishlist
 function addToWishlist(id) {
+
+    const token = localStorage.getItem('token');
+    console.log("TOKEN:", token); // 👈 مهم
+
+    if (!token) {
+        alert("Login first 🔐");
+        return;
+    }
+
     fetch('/api/wishlist', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + localStorage.getItem('token')
+            'Authorization': 'Bearer ' + token,
+            'Accept': 'application/json' // 🔥 مهم
         },
         body: JSON.stringify({ product_id: id })
     })
-    .then(() => {
-        const msg = document.createElement('div');
-        msg.innerText = "Added to wishlist ❤️";
-        msg.className = "fixed top-5 right-5 bg-green-500 text-white px-4 py-2 rounded";
-        document.body.appendChild(msg);
+    .then(async res => {
+        const text = await res.text();
+        console.log("RAW:", text);
 
-        setTimeout(() => msg.remove(), 2000);
+        try {
+            const data = JSON.parse(text);
+
+            if (!res.ok) {
+                console.error(data);
+                alert(data.message || "Error ❌");
+                return;
+            }
+
+            alert("Added ❤️");
+
+        } catch (e) {
+            console.error("HTML response ❌", text);
+        }
     });
 }
 
