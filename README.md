@@ -89,6 +89,8 @@ Password: Admin123@
 ## 📸 Screenshots (optional)
 
 ![alt text](image.png)
+<img width="1918" height="905" alt="image" src="https://github.com/user-attachments/assets/67c05630-fdb2-4719-a9c0-182a6128dfc2" />
+
 
 ---
 
