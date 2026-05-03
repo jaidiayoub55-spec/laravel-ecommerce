@@ -90,6 +90,15 @@ Password: Admin123@
 
 ![alt text](image.png)
 <img width="1918" height="905" alt="image" src="https://github.com/user-attachments/assets/67c05630-fdb2-4719-a9c0-182a6128dfc2" />
+<img width="1918" height="903" alt="image" src="https://github.com/user-attachments/assets/906482d5-4a80-4419-9be8-93a69149a4c0" />
+<img width="1920" height="1947" alt="screencapture-127-0-0-1-8000-admin-2026-05-03-12_42_58" src="https://github.com/user-attachments/assets/7ca18bfc-9aa0-49a0-99dc-dd3f5d936842" />
+<img width="1902" height="905" alt="image" src="https://github.com/user-attachments/assets/e6db0cac-e673-4d06-b75f-eef2b7d61ee1" />
+<img width="1918" height="907" alt="image" src="https://github.com/user-attachments/assets/ddfccc25-c908-4809-bc94-9abfbb7c48bb" />
+
+
+
+
+
 
 
 ---
