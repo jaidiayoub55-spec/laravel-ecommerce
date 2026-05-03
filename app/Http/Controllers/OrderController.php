@@ -14,9 +14,11 @@ class OrderController extends Controller
 {
     // 📦 GET Orders
     public function index()
-    {
-        return Order::with('user')->latest()->get();
-    }
+{
+    return Order::with('items.product', 'user')
+        ->latest()
+        ->get();
+}
 
     // 🧾 STORE (checkout)
     public function store(Request $request)
