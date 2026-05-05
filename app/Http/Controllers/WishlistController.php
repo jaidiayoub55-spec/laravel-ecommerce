@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Wishlist;
+use App\Models\wishlist;
 use Illuminate\Http\Request;
 
 class WishlistController extends Controller
@@ -10,7 +10,7 @@ class WishlistController extends Controller
     // 📦 Get wishlist
     public function index()
     {
-        return Wishlist::with('product')
+        return wishlist::with('product')
             ->where('user_id', auth()->id())
             ->get();
     }
@@ -18,12 +18,12 @@ class WishlistController extends Controller
     // ➕ Add
     public function store(Request $request)
     {
-        $exists = Wishlist::where('user_id', auth()->id())
+        $exists = wishlist::where('user_id', auth()->id())
             ->where('product_id', $request->product_id)
             ->first();
 
         if (!$exists) {
-            Wishlist::create([
+            wishlist::create([
                 'user_id' => auth()->id(),
                 'product_id' => $request->product_id
             ]);
@@ -35,7 +35,7 @@ class WishlistController extends Controller
     // ❌ Delete
     public function destroy($id)
     {
-        Wishlist::findOrFail($id)->delete();
+        wishlist::findOrFail($id)->delete();
         return response()->json(['message' => 'Deleted']);
     }
 }
