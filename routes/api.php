@@ -43,4 +43,5 @@ Route::middleware(['auth:sanctum', 'admin'])->group(function () {
 
     Route::get('/orders', [OrderController::class, 'index']);
     Route::delete('/orders/{id}', [OrderController::class, 'destroy']);
+    Route::put('/orders/{id}/status', [OrderController::class, 'updateStatus']);
 });
