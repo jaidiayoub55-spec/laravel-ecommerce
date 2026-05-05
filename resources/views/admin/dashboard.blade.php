@@ -156,7 +156,7 @@ function loadProducts() {
 
         products.forEach(p => {
             let imageUrl = p.image 
-                ? `http://127.0.0.1:8000/storage/${p.image}`
+                ? `${window.location.origin}/storage/${p.image}`
                 : 'https://via.placeholder.com/150';
 
             html += `
