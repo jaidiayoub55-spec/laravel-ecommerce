@@ -32,6 +32,9 @@ Route::get('/', function () {
 Route::get('/cart', function () {
     return view('cart');
 });
+Route::get('/wishlist', function () {
+    return view('wishlist');
+});
 Route::get('/edit-product/{id}', function ($id) {
     return view('edit-product', compact('id'));
 });
