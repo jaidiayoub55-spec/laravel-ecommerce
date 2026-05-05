@@ -17,17 +17,15 @@ class UserFactory extends Factory
     protected static ?string $password;
 
     public function definition(): array
-    {
-        $faker = \Faker\Factory::create();
-
-        return [
-            'name' => $faker->name(),
-            'email' => $faker->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
-            'remember_token' => Str::random(10),
-        ];
-    }
+{
+    return [
+        'name' => 'Test User',
+        'email' => 'user' . rand(1,10000) . '@mail.com',
+        'email_verified_at' => now(),
+        'password' => Hash::make('password'),
+        'remember_token' => Str::random(10),
+    ];
+}
 
     /**
      * Indicate that the model's email address should be unverified.
