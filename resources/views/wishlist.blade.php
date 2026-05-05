@@ -35,7 +35,7 @@ function loadWishlist() {
         data.forEach(item => {
 
             let imageUrl = item.product.image 
-                ? `http://127.0.0.1:8000/storage/${item.product.image}`
+                ? `${window.location.origin}/storage/${item.product.image}`
                 : 'https://via.placeholder.com/150';
 
             html += `
