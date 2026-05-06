@@ -120,5 +120,5 @@ Password: Admin123@
 
 ## 👨‍💻 Author
 
-* Your Name
+* AYOUB Jaidi
 * GitHub: https://github.com/jaidiayoub55-spec
